@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/github/contributors/themefisher/bigspring-astro-strapi" alt="contributors"></a>
 </p>
 
-![bigspring-light](https://demo.gethugothemes.com/thumbnails/bigspring-light.png)
+![bigspring-light](https://assets.teamosis.com/thumbs/bigspring-light.png)
 
 
 ## Key Features
