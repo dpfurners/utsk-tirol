@@ -48,7 +48,7 @@ const imageInfo = getImageInfo(currentPosts[0].image);
           <div class="md:col-6">
             <h2 class="h3 mb-2 mt-4">
               <a
-                href={`/blog/${currentPosts[0].slug}`}
+                href={`/news/${currentPosts[0].slug}`}
                 class="block hover:text-primary"
               >
                 {currentPosts[0].title}
@@ -63,10 +63,10 @@ const imageInfo = getImageInfo(currentPosts[0].image);
             />
             <a
               class="btn btn-primary mt-4"
-              href={`/blog/${currentPosts[0].slug}`}
+              href={`/news/${currentPosts[0].slug}`}
               rel=""
             >
-              Read More
+              Weiterlesen
             </a>
           </div>
         </div>
@@ -79,7 +79,7 @@ const imageInfo = getImageInfo(currentPosts[0].image);
           ))
         }
       </div>
-      <Pagination section={"blog"} currentPage={1} totalPages={totalPages} />
+      <Pagination section={"news"} currentPage={1} totalPages={totalPages} />
     </div>
   </section>
 </Base>
