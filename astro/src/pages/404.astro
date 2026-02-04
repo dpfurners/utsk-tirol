@@ -13,6 +13,7 @@ const { title, richText } = await getNotfound();
       <div class="flex h-[40vh] items-center justify-center">
         <div class="text-center">
           <h1 class="mb-4" set:html={markdownify(title)} />
+          LOL
           <BlockRender content={richText} client:load />
         </div>
       </div>
