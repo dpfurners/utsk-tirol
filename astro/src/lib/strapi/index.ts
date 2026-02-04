@@ -40,6 +40,7 @@ export async function fetchContentType<T extends StrapiData>(
   const baseUrl = import.meta.env.STRAPI_URL ?? process.env.STRAPI_URL;
   try {
     const url = new URL(`api/${contentType}`, baseUrl);
+    console.log(`Fetching Strapi content type: ${contentType} with params:`, queryParams);
     const response = await fetch(`${url.href}?${qs.stringify(queryParams)}`, {
       method: "GET",
     });
@@ -53,6 +54,7 @@ export async function fetchContentType<T extends StrapiData>(
     const jsonData: StrapiResponse<T> = await response.json();
     return spreadData ? spreadStrapiData(jsonData) : jsonData.data;
   } catch (error) {
+    console.log(`Error fetching Strapi content type: ${contentType} with params:`, queryParams, error);
     console.error("FetchContentTypeError", error);
     return {} as T;
   }

@@ -102,6 +102,31 @@ STRAPI_URL=http://localhost:1337
 yarn && yarn dev
 ```
 
+## Running with Docker (Astro + Strapi + Postgres)
+
+The repository includes a Docker Compose setup that starts:
+- **Postgres** (`db`)
+- **Strapi** (`strapi`)
+- **Astro** (`astro`)
+
+### Start the stack
+
+```bash
+docker compose up --build
+```
+
+### Services
+- Astro: http://localhost:4321
+- Strapi: http://localhost:1337
+
+### Seed Strapi content (optional)
+
+After the containers are running, you can seed Strapi from the included export:
+
+```bash
+docker compose exec strapi yarn seed
+```
+
 
 ## 📄License
 
