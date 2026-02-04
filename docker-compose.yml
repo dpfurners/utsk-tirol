@@ -8,7 +8,7 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5435:5432"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U strapi"]
       interval: 10s
@@ -39,7 +39,7 @@ services:
       - ./strapi:/app
       - strapi-node-modules:/app/node_modules
     ports:
-      - "1337:1337"
+      - "1333:1337"
     depends_on:
       db:
         condition: service_healthy
@@ -62,12 +62,12 @@ services:
     environment:
       HOST: 0.0.0.0
       PORT: 4321
-      STRAPI_URL: http://strapi:1337
+      STRAPI_URL: http://localhost:1333
     volumes:
       - ./astro:/app
       - astro-node-modules:/app/node_modules
     ports:
-      - "4321:4321"
+      - "4324:4321"
     depends_on:
       strapi:
         condition: service_healthy
