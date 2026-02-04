@@ -2,6 +2,8 @@ FROM node:20-bookworm-slim
 
 WORKDIR /app
 
+ENV STRAPI_URL=http://strapi:1337
+
 COPY package.json ./
 
 RUN npm install
